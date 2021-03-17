@@ -44,6 +44,15 @@ body {
     height: 100vh;
 }
 
+.Right-line {
+    margin-top: 65vh;
+    margin-left: -50vw;
+    width: 50% !important;
+    height: auto;
+    position: fixed;
+    z-index: 1 !important;
+}
+
 @media (max-width: 1000px) {
     .App-logo {
         margin-top: -20px;
