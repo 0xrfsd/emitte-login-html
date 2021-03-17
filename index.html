@@ -12,7 +12,7 @@
     <!-- Folha de estilo CSS -->
     <link rel="stylesheet" href="./index.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Login</title>
 </head>
 
 <body>
@@ -29,31 +29,28 @@
                             <div class="Login-box-line">
                                 <input autocapitalize="none" class="Login-box-input" placeholder="Digite seu e-mail"
                                     type="text" id="email" />
-                                <img src="./email.svg" class="Login-box-icon" alt="email" />
+                                <img src="./email.svg" class="Login-box-icon-email" alt="email" />
                             </div>
                             <div class="Login-box-line">
-                                <input autocapitalize="none" type="password" class="Login-box-input" placeholder="Senha"
-                                    type="text" id="email" />
-                                <img src="./hidden.svg" class="Login-box-icon" alt="email" />
+                                <input autocapitalize="none" type="password" id="password" class="Login-box-input"
+                                    placeholder="Senha" type="text" id="email" />
+                                <img src="./hidden.svg" class="Login-box-icon" alt="show-hide" id="eye"
+                                    onclick="toggle()" />
                             </div>
                             <a class="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
                                 Esqueceu sua senha?
                             </a>
                             <button class="Login-box-submit">
                                 <p>Fazer Login</p>
+                                <img src="./arrow.svg" alt="arrow" />
                             </button>
                         </form>
                     </div>
                 </div>
                 <div class="Cadastro">
                     <p class="Cadastro-Text">Não possui um cadastro?</p>
-                    <a 
-                        class="Cadastro-Link"
-                        href="https://reactjs.org"
-                        target="_blank"
-                        rel="noopener noreferrer'"
-                    >
-                    Cadastre-se
+                    <a class="Cadastro-Link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer'">
+                        Cadastre-se
                     </a>
                 </div>
             </div>
@@ -62,6 +59,24 @@
             </div>
         </div>
     </div>
+    <script>
+        var state = false;
+        function toggle() {
+            if (state) {
+                document.getElementById("password")
+                    .setAttribute("type", "password");
+                document.getElementById("eye")
+                    .style.color = '#333';
+                state = false;
+            } else {
+                document.getElementById("password")
+                    .setAttribute("type", "text");
+                document.getElementById("eye")
+                    .style.color = '#444';
+                state = true;
+            }
+        }
+    </script>
 </body>
 
 </html>
