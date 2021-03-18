@@ -282,13 +282,19 @@ body {
     background: #00D37F;
     border-radius: 100px !important;
     outline-width: 0px !important;
+    transition: all .3s;
     cursor: pointer;
+}
+
+.Login-box-submit:hover{
+    box-shadow: 0px 1px 10px #0050DC;
+    background-color: #0050DC;
 }
 
 .Login-box-submit>p {
     font-size: 12px;
     font-weight: bold !important;
-    color: white !important;
+    color: #fff !important;
 }
 
 .App-header {
